@@ -1,0 +1,2 @@
+### Prompt 
+_Make a modern FAQ section for a DevConf 2026 conference landing page using HTML and CSS. The section should match like a professional conference website. Make sure include a centered heading and subtitle, four expandable FAQ items, responsive design.

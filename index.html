@@ -4,8 +4,594 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:#fff;
+}
+
+header{
+    background:#ffffff;
+}
+
+.navbar{
+    max-width:1551px;
+    height:98px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:60px 0;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width: 130px;
+    height: 60px;
+}
+
+.nav-links{
+    display:flex;
+    gap:24px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#444;
+    font-size:15px;
+}
+
+.btn-primary{
+    text-decoration:none;
+    background:#2F5CF3;
+    color:white;
+    padding:12px 24px;
+    border-radius:12px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-primary:hover{
+
+    background:#2047d8;
+}
+
+.hero{
+    width:100%;
+    min-height:90vh;
+    background-image:url("./assets/banner.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    position:relative;
+}
+
+.overlay{
+    width:100%;
+    min-height:90vh;
+    background:rgba(0,0,0,.65);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content{
+    width:90%;
+    max-width:760px;
+}
+
+.hero-content h1{
+    color:#ffffff;
+    font-size:64px;
+    font-weight:800;
+    line-height:1.2;
+    margin-bottom:25px;
+}
+
+.hero-content h1 em{
+    font-style:italic;
+}
+
+.hero-content p{
+    color:#d7d7d7;
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:40px;
+}
+
+.hero-btn{
+    text-decoration:none;
+    background:#2F5CF3;
+    color:white;
+    padding:12px 24px;
+    border-radius:12px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    background:#1f48df;
+}
+
+.speakers{
+    padding:90px 0;
+    background:#ffffff;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.speakers h2{
+    text-align:center;
+    font-size:48px;
+    font-weight:700;
+    color:#111827;
+    margin-bottom:60px;
+}
+
+.speaker-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+.speaker-card{
+    background:#ffffff;
+    border:1px solid #e5e7eb;
+    border-radius:10px;
+    overflow:hidden;
+    
+}
+
+.speaker-card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    display:block;
+}
+
+.speaker-info{
+    padding:18px;
+}
+
+.speaker-info span{
+    color:#2F5CF3;
+    font-size:12px;
+    font-weight:700;
+    text-transform:uppercase;
+}
+
+.speaker-info h3{
+    margin:10px 0 8px;
+    font-size:22px;
+    color:#111827;
+}
+
+.speaker-info p{
+    color:#6b7280;
+    font-size:15px;
+}
+
+
+.pricing{
+    padding:100px 0;
+    background:#ffffff;
+}
+
+.pricing h2{
+    text-align:center;
+    font-size:48px;
+    color:#111827;
+    margin-bottom:10px;
+}
+
+.pricing-subtitle{
+    text-align:center;
+    color:#6b7280;
+    margin-bottom:60px;
+}
+
+.pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.price-card{
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:10px;
+    padding:35px 30px;
+    display:flex;
+    flex-direction:column;
+    transition:.3s;
+}
+
+.featured{
+    background:#01133a;
+    color:#fff;
+    transform:scale(1.05);
+}
+
+.featured h3,
+.featured h5,
+.featured .price-text,
+.featured ul{
+
+    color:#fff;
+}
+
+.price-card h5{
+    color:#6b7280;
+    letter-spacing:1px;
+    margin-bottom:10px;
+}
+
+.price-card h3{
+    font-size:42px;
+    margin-bottom:5px;
+}
+
+.price-text{
+    color:#6b7280;
+    margin-bottom:20px;
+}
+
+.price-card hr{
+    margin:20px 0;
+    border:none;
+    border-top:1px solid #e5e7eb;
+}
+
+.price-card ul{
+    list-style:disc;
+    padding-left:20px;
+    flex:1;
+}
+
+.price-card ul li{
+    margin-bottom:12px;
+    line-height:1.6;
+}
+
+.price-btn{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    margin-top:30px;
+    padding:14px;
+    border:2px solid #2F5CF3;
+    border-radius:8px;
+    color:#2F5CF3;
+    font-weight:600;
+    transition:.3s;
+}
+
+.price-btn:hover{
+    background:#2F5CF3;
+    color:#fff;
+}
+
+.featured-btn{
+    background:#2F5CF3;
+    color:#fff;
+    border:none;
+}
+
+.featured-btn:hover{
+    background:#2047d8;
+}
+
+/* ==========================
+        FAQ SECTION
+========================== */
+
+.faq{
+
+    padding:100px 0;
+
+    background:#F8FAFC;
+}
+
+.faq h2{
+
+    text-align:center;
+
+    font-size:48px;
+
+    color:#111827;
+
+    margin-bottom:15px;
+}
+
+.faq-subtitle{
+
+    text-align:center;
+
+    color:#6B7280;
+
+    margin-bottom:60px;
+}
+
+.faq-container{
+
+    max-width:900px;
+
+    margin:auto;
+}
+
+.faq details{
+
+    background:#ffffff;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:8px;
+
+    padding:20px;
+
+    margin-bottom:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.faq details:hover{
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.faq summary{
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:#111827;
+
+    list-style:none;
+}
+
+.faq summary::-webkit-details-marker{
+
+    display:none;
+}
+
+.faq p{
+
+    margin-top:15px;
+
+    color:#6B7280;
+
+    line-height:1.7;
+}
+    </style>
 </head>
+
 <body>
-    <h1>Hello, World!</h1>
+    <header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./assets/logo.png" alt="Logo">
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#">Speakers</a></li>
+            <li><a href="#">Schedule</a></li>
+            <li><a href="#">Tracks</a></li>
+            <li><a href="#">Venue</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+
+        <a href="#" class="btn-primary">
+            Register Now
+        </a>
+    </nav>
+
+<section class="hero">
+    <div class="overlay">
+        <div class="hero-content">
+            <h1>
+                Code.
+                <em>Connect.</em>
+                Create
+            </h1>
+
+            <p>
+                Join 4,000+ engineers, founders, and builders at the premier
+                developer conference of 2026. Three days of cutting-edge talks,
+                hands-on workshops, and meaningful connections.
+            </p>
+
+            <a href="#" class="hero-btn">
+                Register Now
+            </a>
+        </div>
+    </div>
+
+</section>
+<section class="speakers">
+
+    <div class="container">
+        <h2>Meet the Speakers</h2>
+        <div class="speaker-grid">
+            <div class="speaker-card">
+                <img src="./assets/andrej.png" alt="Andrej Karpathy">
+                <div class="speaker-info">
+                    <span>AI / ML</span>
+                    <h3>Andrej Karpathy</h3>
+                    <p>Pretraining Team, Anthropic</p>
+                </div>
+            </div>
+            <div class="speaker-card">
+                <img src="./assets/demis.png" alt="Demis Hassabis">
+                <div class="speaker-info">
+                    <span>Cloud & DevOps</span>
+                    <h3>Demis Hassabis</h3>
+                    <p>Co-Founder & CEO, Google DeepMind</p>
+                </div>
+            </div>
+            <div class="speaker-card">
+                <img src="./assets/gary.png" alt="Gary Marcus">
+                <div class="speaker-info">
+                    <span>Frontend</span>
+                    <h3>Gary Marcus</h3>
+                    <p>Staff Engineer, Vercel</p>
+                </div>
+                
+            </div>
+            <div class="speaker-card">
+                <img src="./assets/mustafa.png" alt="Mustafa Suleyman">
+                <div class="speaker-info">
+                    <span>Security</span>
+                    <h3>Mustafa Suleyman</h3>
+                    <p>CEO of Microsoft AI</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="pricing">
+    <div class="container">
+        <h2>Secure Your Spot</h2>
+        <p class="pricing-subtitle">
+            Early-bird pricing ends August 15, 2026.
+        </p>
+
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h5>STANDARD</h5>
+                <h3>$399</h3>
+                <p class="price-text">per person</p>
+                <hr>
+                <ul>
+                    <li>Access to all 3 conference days</li>
+                    <li>48 curated technical talks</li>
+                    <li>2 workshop sessions</li>
+                    <li>Networking lunch & coffee breaks</li>
+                    <li>Conference swag bag</li>
+                </ul>
+
+                <a href="#" class="price-btn">
+                    Get Standard
+                </a>
+            </div>
+
+            <div class="price-card featured">
+                <h5>PRO</h5>
+                <h3>$749</h3>
+                <p class="price-text">per person</p>
+                <hr>
+
+                <ul>
+                    <li>Everything in Standard</li>
+                    <li>Unlimited workshop access</li>
+                    <li>Speaker meet & greet</li>
+                    <li>VIP networking dinner</li>
+                    <li>Lifetime recording access</li>
+                </ul>
+
+                <a href="#" class="price-btn featured-btn">
+                    Get Pro
+                </a>
+            </div>
+
+            <div class="price-card">
+                <h5>TEAM</h5>
+                <h3>$5,999</h3>
+                <p class="price-text">Up to 10 people</p>
+
+                <hr>
+
+                <ul>
+                    <li>Everything in Pro</li>
+                    <li>Dedicated team lounge</li>
+                    <li>Private workshop booking</li>
+                    <li>Company logo on event page</li>
+                    <li>Priority customer support</li>
+                </ul>
+
+                <a href="#" class="price-btn">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section Start -->
+
+<section class="faq">
+
+    <div class="container">
+
+        <h2>Frequently Asked Questions</h2>
+
+        <p class="faq-subtitle">
+            Everything you need to know before joining DevConf 2026.
+        </p>
+
+        <div class="faq-container">
+
+            <details>
+                <summary>Who can attend DevConf 2026?</summary>
+                <p>
+                    Developers, students, engineers, designers, startup founders,
+                    and anyone interested in technology are welcome.
+                </p>
+            </details>
+
+            <details>
+                <summary>Will I receive a certificate?</summary>
+                <p>
+                    Yes. Every attendee will receive a digital participation certificate.
+                </p>
+            </details>
+
+            <details>
+                <summary>Are meals included?</summary>
+                <p>
+                    Lunch, coffee breaks, and networking refreshments are included
+                    with every ticket.
+                </p>
+            </details>
+
+            <details>
+                <summary>Can I upgrade my ticket later?</summary>
+                <p>
+                    Yes. You can upgrade your ticket anytime before the event,
+                    subject to seat availability.
+                </p>
+            </details>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FAQ Section End -->
+</header>
 </body>
 </html>
